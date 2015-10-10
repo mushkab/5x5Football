@@ -1,12 +1,18 @@
 <head>
-    <title>football</title>
+    <title>5x5Football</title>
 </head>
 
 <body>
 <div class="container">
     <header>
         <h1>5x5Football</h1>
+        <form class="new-game">
+            <input type="text" name="text" placeholder="Type to add new game" />
+        </form>
     </header>
+
+    <br/> <br/>
+
     <ul>
         {{> loginButtons}}
         {{> gamesList}}
@@ -25,5 +31,12 @@
 
 
 <template name="game">
-    <li>{{gameName}}</li>
+    <li>
+        <button class="delete">&times;</button>
+
+        <span class="gameName">{{text}}</span>
+
+    </li>
+
+    <!-- <li>{{gameName}}</li> -->
 </template>

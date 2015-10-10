@@ -1,29 +1,29 @@
 <head>
-  <title>football</title>
+    <title>football</title>
 </head>
 
 <body>
 <div class="container">
     <header>
-      <h1>5x5Football</h1>
+        <h1>5x5Football</h1>
     </header>
     <ul>
-{{> loginButtons}}
-  {{> gamesList}}
-  </ul>
-  </div>
+        {{> loginButtons}}
+        {{> gamesList}}
+    </ul>
+</div>
 </body>
 
 
 <template name="gamesList">
- <ul>
-      {{#each games}}
-        {{> game}}
-      {{/each}}
+    <ul>
+        {{#each games}}
+            {{> game}}
+        {{/each}}
     </ul>
 </template>
 
 
 <template name="game">
-<li>{{gameName}}</li>
+    <li>{{gameName}}</li>
 </template>

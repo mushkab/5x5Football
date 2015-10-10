@@ -3,12 +3,27 @@
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
-
-  {{> hello}}
+<div class="container">
+    <header>
+      <h1>5x5Football</h1>
+    </header>
+    <ul>
+{{> loginButtons}}
+  {{> gamesList}}
+  </ul>
+  </div>
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+
+<template name="gamesList">
+ <ul>
+      {{#each games}}
+        {{> game}}
+      {{/each}}
+    </ul>
+</template>
+
+
+<template name="game">
+<li>{{gameName}}</li>
 </template>
